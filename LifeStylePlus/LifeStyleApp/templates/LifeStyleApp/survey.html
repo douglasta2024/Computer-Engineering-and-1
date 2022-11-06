@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  ``<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles.css">
-  <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
+    <title>Title</title>
 </head>
 <body>
-<div class="text-center">
-    <h1 class="title">LifeStyle+</h1>
-</div>
-<div class="modal/body text-center">
-  <p class="jumbotron">Take the mental health survey below to receive or update your information</p>
-  <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/forms/about/">Mental Health Survey</a>
-  <br>
-  <a href="hi.html">Go to Hi page</a>
+<div class="container h-100">
+    <div class="text-center">
+        <h3 id="form-title" style="font-size: xxx-large">LifeStyle+ Mental Health Survey</h3>
+    </div>
+    <br>
+    <br>
+    <div class="modal/body text-center">
+      <p>Mental Health is an essential part of living a balanced, healthy life. To begin, please take our survey below so
+          LifeStyle+ can provide resources and recommendations that pertain to you.
+      </p>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/forms/about/">Mental Health Survey</a>
+      <br>
+      <!--<a href="home.html">Go to Home Page</a>-->
+    </div>
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
