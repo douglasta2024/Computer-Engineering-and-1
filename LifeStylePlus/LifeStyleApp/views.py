@@ -33,3 +33,6 @@ def loginPage(request):
             return redirect('home-page')
     context = {}
     return render(request, 'accounts/loginpage.html', context)
+
+def surveyPage(request):
+    return render(request, 'LifeStyleApp/survey.html')
