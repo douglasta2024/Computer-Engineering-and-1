@@ -36,3 +36,9 @@ def loginPage(request):
 
 def surveyPage(request):
     return render(request, 'LifeStyleApp/survey.html')
+
+def physicalPage(request):
+    return render(request, 'LifeStyleApp/physicalDataInput.html')
+
+def graphPage(request):
+    return render(request, 'LifeStyleApp/Graph.html')
