@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LIFESTYLE+</title>
-    <style>
-        table,th,td{border : 1px solid black}
-    </style>
-</head>
-<body>
-<h1>Welcome to Lifestyle+!</h1>
-<h2>This is my website</h2>
-<u1>
-    <li>Python</li>
-    <li>Java</li>
-</u1>
-<table style="width:30%">
-    <tr>
-        <th>Python</th>
-        <th>Java</th>
-    </tr>
-    <tr>
-        <td>Pycharm</td>
-        <td>Eclipse</td>
-    </tr>
-</table>
-</body>
+    <head>
+        <style>
+            #button1{
+                width: 600px;
+                height: 300px;
+            }
+            #button2{
+                width: 600px;
+                height: 300px;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+         </style>
+
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+
+    </head>
+    <body>
+
+        <h1>
+            <p style="text-align:center">
+                Welcome to Lifestyle+!
+            </p>
+        </h1>
+
+        <h2>
+            <p style="text-align:center">
+                Please choose the topic that you need assistance with.
+            </p>
+        </h2>
+
+        <div class="container">
+          <div class="button-wrapper">
+             <button type="button phycial-button" id="button1" >Physical Health</button>
+             <button type="button mental-button" id="button2">Mental Health</button>
+          </div>
+        </div>
+
+    </body>
 </html>
