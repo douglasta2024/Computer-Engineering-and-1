@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
+    <style>
+
+    </style>
     <title>Title</title>
 </head>
 <body>
@@ -23,12 +26,27 @@
       <br>
       <!--<a href="home.html">Go to Home Page</a>-->
     </div>
+
+    <label for="depression">Depression:</label>
+    <select name="depression" id="depression" onchange="location= this.value">
+        <option value="https://www.youtube.com/watch?v=z-IR48Mb3W0">What is depression?</option>
+        <option value="https://www.youtube.com/watch?v=MOiaSc38ZeI">Coping with depression.</option>
+    </select>
+    <br>
+    <label for="anxiety">Anxiety:</label>
+    <select name="anxiety" id="anxiety" onchange="location= this.value">
+        <option value="https://www.youtube.com/watch?v=J8MKgS--u3E">What is anxiety?</option>
+        <option value="https://www.youtube.com/watch?v=9mPwQTiMSj8">Causes, symptoms & treatments (Generalized Anxiety Disorder)</option>
+    </select>
+
     <div class="button-wrapper">
         <button type="button" id="button1" >
             <a href="{% url 'home-page' %}">Go Back to Home Page</a>
         </button>
     </div>
+
 </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
