@@ -3,13 +3,22 @@
     <head>
         <style>
             #button1{
-                width: 600px;
-                height: 300px;
+                border: none;
+                cursor: pointer;
+                width: 650px;
+                height: 428px;
             }
             #button2{
-                width: 600px;
-                height: 300px;
+                border: none;
+                cursor: pointer;
+                width: 650px;
+                height: 428px;
             }
+            img{
+                width: 650px;
+                height: 428px;
+            }
+
 
             .container {
                 display: flex;
@@ -18,12 +27,24 @@
                 height: 100%;
             }
 
+            .mental-health {
+                right: 300px;
+                text-align: right;
+                position: relative;
+            }
+            .physical-health {
+                left: 700px;
+                position: absolute;
+            }
+            .MH {
+            }
+
+
+
          </style>
 
         <meta charset="UTF-8">
         <title>Homepage</title>
-	    {% load static %}
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
 
     </head>
     <body>
@@ -40,14 +61,25 @@
             </p>
         </h2>
 
+        <h3 class="mental-health">
+            <span class="physical-health"><a href="{% url 'physical-page' %}">Physical Health Section </a></span>
+            <span class="MH"> <a href="{% url 'survey' %}">Mental Health Section  </a></span>
+        </h3>
+
+
         <div class="container">
           <div class="button-wrapper">
-             <button type="button phycial-button" id="button1" >Physical Health
-                 <a href="{% url 'physical-page' %}">Go to Physical Health Section</a>
-             </button>
-             <button type="button mental-button" id="button2">Mental Health
-                 <a href="{% url 'survey' %}">Go to Mental Health Section</a>
-             </button>
+              <button type="button physical-button" id="button1">
+                  <a href="{% url 'physical-page' %}">
+                      <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2022/04/exerciseHowOften-944015592-770x533-1-650x428.jpg" alt="exerciseHowOften-944015592-770x533-1-650x428jpg" border="0" />
+                  </a>
+              </button>
+
+              <button type="button mentalhealth-button" id="button2">
+                  <a href="{% url 'survey' %}">
+                      <img src="https://media.istockphoto.com/id/1279275812/vector/happy-girl-having-great-mental-health.jpg?s=612x612&w=0&k=20&c=XUXTN8EQ17wUh0LqJ2APr5-5X38egQDQ62395l0ktIc=" alt="happy-girl-having-great-mental-healthjpg" border="0" />
+                  </a>
+              </button>
           </div>
         </div>
 
