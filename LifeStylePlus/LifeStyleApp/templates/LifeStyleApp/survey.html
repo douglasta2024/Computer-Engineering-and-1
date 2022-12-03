@@ -11,10 +11,11 @@
         /*Mental Health Resource Blocks*/
         .resourcebox {
             display: inline-block;
-            border-top: 5px solid black;
-            text-align: center;
+            border-top: 3px solid black;
+            text-align: left;
             width: 100%;
             horiz-align: center;
+            margin-bottom: 5%;
         }
     </style>
     <title>Title</title>
@@ -48,6 +49,7 @@
         </div>
 
         <br>
+        /*Dropdown menus that lead to informational videos*/
         <label for="depression">Depression:</label>
         <select name="depression" id="depression" onchange="location= this.value">
             <option value="https://www.youtube.com/watch?v=z-IR48Mb3W0">What is depression?</option>
@@ -66,23 +68,84 @@
         <div class="text-center">
             <h3 style="font-size: xx-large">Resources</h3>
         </div>
-        <div class="resourcebox">
-            <p>Office of Counseling and Student Development</p>
+        /*Dropdown menu for resource blocks*/
+        <label for="resources">Resources Options</label>
+        <select name="resources" id="resources" onchange="location= this.value">
+            <option value="#StudentDev">Office of Counseling and Student Development</option>
+            <option value="#UFCounsel">UF Counseling and Wellness Center</option>
+            <option value="#UFEmploy">UF Employee Assistance Program</option>
+            <option value="#MedPsyClinic">Medical Psychology Clinic</option>
+            <option value="#PsyClinic">Psychology Clinic</option>
+            <option value="#UFFamily">UF Couple and Family Clinic</option>
+            <option value="#Adultout">Adult Outpatient Psychiatry Services</option>
+            <option value="#UFrecov">UF Health Florida Recovery Center</option>
+        </select>
+        <div class="resourcebox" id="StudentDev">
+            <h3>Office of Counseling and Student Development</h3>
             <p>Harrell Medical Education Building 1104 Newell Drive, Gainesville, FL 32610 Fourth Floor, Suite 446 </p>
             <p>To request a counseling appointment, please contact Dr. Beverly Dede via email or phone. To
-                expedite the scheduling process, please provide the following information: 1. Your name and
-                student status (e.g., MS1, PA student, Grad student); 2. Your availability – Monday-Friday, 9:30-
-                4:30, and after 5:00 for clinical students; 3. Specify the urgency of your request – High, (today, if
-                possible), Medium (this week), Low (next week) </p>
+                expedite the scheduling process, please provide the following information:</p>
+            <p>1. Your name and
+                student status (e.g., MS1, PA student, Grad student)</p>
+            <p>2. Your availability – Monday-Friday, 9:30 - 4:30, and after 5:00 for clinical students</p>
+            <p>3. Specify the urgency of your request – High, (today, if possible), Medium (this week), Low (next
+                week) </p>
         </div>
         <br>
-        <div class="resourcebox">
-            <p>UF Counseling and Wellness Center (individual, group, and/or couples counseling; drug &
-                alcohol use disorder services; psychiatry services) </p>
-            <p>CWC Radio Road: 3190 Radio Road, Gainesville, FL
-                CWC Peabody Hall: 1500 Union Rd. 4th floor, Room 401 Gainesville, FL
-                • https://counseling.ufl.edu/services/
-                • For an appointment call: 352-392-1575 </p>
+        <div class="resourcebox" id="UFCounsel">
+            <h3>UF Counseling and Wellness Center</h3>
+            <p>For individual, group, and/or couples counseling; drug & alcohol use disorder services; psychiatry services</p>
+            <p>CWC Radio Road: 3190 Radio Road, Gainesville, FL</p>
+            <p>CWC Peabody Hall: 1500 Union Rd. 4th floor, Room 401 Gainesville, FL</p>
+            <a href="https://counseling.ufl.edu/services/" }>https://counseling.ufl.edu/services/</a>
+            <p>For an appointment call: 352-392-1575 </p>
+        </div>
+        <div class="resourcebox" id="UFEmploy">
+            <h3>UF Employee Assistance Program (Graduate Assistants)</h3>
+            <p>Direct, 24/7 access to a licensed counselor, who will answer your questions and, if needed, refer
+                you to a counselor or other resources. </p>
+            <p>Call: 352-392-5787 or (toll free) 1-833-306-0103 </p>
+            <p style="display:inline">Online chat with a counselor and access to resources available at: </p>
+            <a href="https://eap.ufl.edu/">https://eap.ufl.edu/</a>
+        </div>
+        <div class="resourcebox" id="MedPsyClinic">
+            <h3>Medical Psychology Clinic</h3>
+            <p>For psychological or psychoeducational assessment, OCD program, eating disorders, ADHD, anxiety, depression, sleep, stress</p>
+            <p>8491 NW 39th Avenue, Gainesville 32606 </p>
+            <a href="https://ufhealth.org/medical-psychology-shands-uf">https://ufhealth.org/medical-psychology-shands-uf</a>
+            <p>For an appointment call: 352.265.HELP (4357) </p>
+        </div>
+        <div class="resourcebox" id="PsyClinic">
+            <h3>Psychology Clinic</h3>
+            <p>For neuropsych or psych assessment, fear & anxiety clinic, depression, sleep, stress</p>
+            <p>UF Health Shands Hospital G901 (ground floor) </p>
+            <a href="http://chp.phhp.ufl.edu/services/psychology-clinic/">http://chp.phhp.ufl.edu/services/psychology-clinic/ </a>
+            <p>For an appointment call: 352.265.0294 </p>
+        </div>
+        <div class="resourcebox" id="UFFamily">
+            <h3>UF Couple and Family Clinic</h3>
+            <p>For free individual, family, and couples counseling</p>
+            <p>618 SW 12th St., Norman Hall Addition, Room 2-130, Gainesville, FL </p>
+            <a href="https://education.ufl.edu/counselor-education/couple-and-family-clinic/">https://education.ufl.edu/counselor-education/couple-and-family-clinic/ </a>
+            <br>
+            <p style="display:inline">For an appointment email: </p>
+            <a href="bliss@villagecounselingcenter.net">bliss@villagecounselingcenter.net </a>
+        </div>
+        <div class="resourcebox" id="Adultout">
+            <h3>Adult Outpatient Psychiatry Services </h3>
+            <p>4037 NW 86 Terrace, Gainesville 32606 (off NW 39th Avenue) </p>
+            <a href="https://ufhealth.org/psychiatry-springhill">https://ufhealth.org/psychiatry-springhill </a>
+            <p>For an appointment call: 352.265.HELP (4357) </p>
+            <p>Appointments can be expedited with referral from Dr. Beverly Dede </p>
+        </div>
+        <div class="resourcebox" id="UFrecov">
+            <h3>UF Health Florida Recovery Center</h3>
+            <p>For drug & alcohol use disorders</p>
+            <p>4037 NW 86 Terrace, Gainesville 32606 (off NW 39th Avenue)—outpatient services </p>
+            <p>4001 SW 13th Street, Gainesville 32608—outpatient, intensive outpatient, and residential services </p>
+            <p>4101 NW 89th Blvd, Gainesville, FL 32606—inpatient detox services </p>
+            <a href="https://ufhealth.org/ufshands-florida-recovery-center">https://ufhealth.org/ufshands-florida-recovery-center</a>
+            <p>For an appointment call: 352.265.4FRC (4372) </p>
         </div>
     </div>
 </div>
