@@ -7,7 +7,7 @@
 .context h1{
     text-align: center;
     color: #fff;
-    font-size: 50px;
+    font-size: 150px;
 }
 .area{
     background: #3498db;
@@ -143,6 +143,20 @@ p{
   font-size:12px;
   text-decoration: none;
   color:#ffffff;
+}
+
+h1{
+  font-family: 'Exo', sans-serif;
+  font-size:75px;
+  font-weight: bolder;
+  color:#FFFFFF;
+}
+
+h2{
+  font-family: 'Exo', sans-serif;
+  font-size:35px;
+  font-weight: bold;
+  color:#FFFFFF;
 }
 
 h3{

@@ -7,32 +7,24 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	{% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
-<!--
- .tab { margin-left: 117px; }
--->
-    </style>
     <title>Physical Data Input</title>
 </head>
 <body>
-<h1>
-<p style="text-align:center">
-    Lifestyle+
-</p>
-</h1>
-<p>Hello! Please input your data into the following boxes down below.</p>
-<form>
-    <label for="miles">Miles Ran:</label>
-    <input type="text" id="miles" name="miles" class="tab"><br>
-    <label for="time">Length of Time in Minutes:</label>
-    <input type="text id=time" name="time"><br>
-    <input type="submit" value="Submit"><br>
-    <button>
-        <a href="{% url 'home-page' %}">Back To Homepage</a>
-    </button>
-    <br>
-    {% load static %}
-    <img src="{% static 'images/running.jpg' %}" alt="The Average Lifestyle+ User">
-</form>
+    <div class = "container">
+        <h1>
+            Lifestyle+
+        </h1>
+        <h2>
+            Hello! Please input your data into the following boxes down below.
+        </h2>
+        <form method="POST" action="{% url 'physical-page' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button>
+                Submit
+            </button>
+        </form>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

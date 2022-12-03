@@ -1,87 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <style>
-            #button1{
-                border: none;
-                cursor: pointer;
-                width: 650px;
-                height: 428px;
-            }
-            #button2{
-                border: none;
-                cursor: pointer;
-                width: 650px;
-                height: 428px;
-            }
-            img{
-                width: 650px;
-                height: 428px;
-            }
-
-
-            .container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-            }
-
-            .mental-health {
-                right: 300px;
-                text-align: right;
-                position: relative;
-            }
-            .physical-health {
-                left: 700px;
-                position: absolute;
-            }
-            .MH {
-            }
-
-
-
-         </style>
-
-        <meta charset="UTF-8">
-        <title>Homepage</title>
-
+        <title>Home</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
     </head>
     <body>
+        <div class="area">
+            <div class="h1">
+                <h1>
+                    Welcome to Lifestyle+!
+                </h1>
+            </div>
+            <div class="h2">
+                <h2>
+                    Please choose the topic that you need assistance with.
+                </h2>
+            </div>
+            <div class="h3">
+                <h3 class="mental-health">
+                    <span class="physical-health"><a href="{% url 'physical-page' %}">Physical Health Section </a></span>
+                    <span class="MH"> <a href="{% url 'survey' %}">Mental Health Section  </a></span>
+                </h3>
+            </div>
+            <div class="button-wrapper">
+                <button type="button physical-button" id="button1">
+                    <a href="{% url 'physical-page' %}">
+                        <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2022/04/exerciseHowOften-944015592-770x533-1-650x428.jpg" alt="exerciseHowOften-944015592-770x533-1-650x428jpg" border="0" />
+                    </a>
+                </button>
 
-        <h1>
-            <p style="text-align:center">
-                Welcome to Lifestyle+!
-            </p>
-        </h1>
+                <button type="button mentalhealth-button" id="button2">
+                    <a href="{% url 'survey' %}">
+                        <img src="https://media.istockphoto.com/id/1279275812/vector/happy-girl-having-great-mental-health.jpg?s=612x612&w=0&k=20&c=XUXTN8EQ17wUh0LqJ2APr5-5X38egQDQ62395l0ktIc=" alt="happy-girl-having-great-mental-healthjpg" border="0" />
+                    </a>
+                </button>
 
-        <h2>
-            <p style="text-align:center">
-                Please choose the topic that you need assistance with.
-            </p>
-        </h2>
-
-        <h3 class="mental-health">
-            <span class="physical-health"><a href="{% url 'physical-page' %}">Physical Health Section </a></span>
-            <span class="MH"> <a href="{% url 'survey' %}">Mental Health Section  </a></span>
-        </h3>
-
-
-        <div class="container">
-
-          <div class="button-wrapper">
-              <button type="button physical-button" id="button1">
-                  <a href="{% url 'physical-page' %}">
-                      <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2022/04/exerciseHowOften-944015592-770x533-1-650x428.jpg" alt="exerciseHowOften-944015592-770x533-1-650x428jpg" border="0" />
-                  </a>
-              </button>
-
-              <button type="button mentalhealth-button" id="button2">
-                  <a href="{% url 'survey' %}">
-                      <img src="https://media.istockphoto.com/id/1279275812/vector/happy-girl-having-great-mental-health.jpg?s=612x612&w=0&k=20&c=XUXTN8EQ17wUh0LqJ2APr5-5X38egQDQ62395l0ktIc=" alt="happy-girl-having-great-mental-healthjpg" border="0" />
-                  </a>
-              </button>
-          </div>
+            </div>
         </div>
 
     </body>
