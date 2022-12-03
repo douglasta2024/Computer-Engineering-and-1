@@ -4,8 +4,9 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 
-# Create your views here.
+# Create your views here.S
 from .forms import CreateUserForm
+from .forms import UploadForm
 def hi(request):
     return render(request, 'LifeStyleApp/hi.html')
 def registerPage(request):
@@ -38,7 +39,12 @@ def surveyPage(request):
     return render(request, 'LifeStyleApp/survey.html')
 
 def physicalPage(request):
-    return render(request, 'LifeStyleApp/physicalDataInput.html')
+    if request.method == 'POST':
+        form = UploadForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('home-page')
+    return render(request, 'LifeStyleApp/physicalDataInput.html', {'form' : UploadForm})
 
 def graphPage(request):
     return render(request, 'LifeStyleApp/Graph.html')
