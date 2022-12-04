@@ -10,8 +10,8 @@ class CreateUserForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 class UploadForm(ModelForm):
+    days = forms.IntegerField()
     miles = forms.IntegerField()
-    minutes = forms.IntegerField()
     class Meta:
         model = Post
-        fields = ['miles', 'minutes']
+        fields = ['days', 'miles']

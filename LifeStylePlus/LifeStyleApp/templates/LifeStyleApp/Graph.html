@@ -7,9 +7,37 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	{% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
-    <title>Title</title>
+    <title>Graph Page</title>
 </head>
 <body>
+    <h1>
+        Graph
+    </h1>
+    <h2>
+        Your Average! : {{ avg }}
+    </h2>
+    <h3>
+        Average for Males: 2.39 Miles
+        <br>
+        Average for Females: 2.05 Miles
+    </h3>
+    <div class="container">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        {% if chart %}
+            <img src="data:image/png;base64, {{ chart|safe }}">
+        {% endif %}
+    </div>
 
 </body>
 </html>
