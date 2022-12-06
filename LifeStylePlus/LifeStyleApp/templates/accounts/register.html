@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!--  Style import for the page  -->
 	<title>Login</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -11,6 +12,7 @@
 </head>
 <body>
 	<div class="area">
+        <!-- class from imported style for the animated circles that come from bottom of page  -->
         <ul class="circles">
             <li></li>
             <li></li>
@@ -23,6 +25,7 @@
             <li></li>
             <li></li>
         </ul>
+        <!-- Classes for user card that shows up when you enter the register site for the first time  -->
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
@@ -62,7 +65,7 @@
 				   		</div>
 					</form>
 				</div>
-
+                <!-- Takes you to the login page if you already have an account and want to go back  -->
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Already have an account? <a href="{% url 'loginpage' %}" class="ml-2">Login</a>

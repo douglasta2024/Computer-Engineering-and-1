@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import base64
 from io import BytesIO
 
+# get graph and get plot are matplotlib and edited to have functionality for the physical data used
 def get_graph():
     buffer = BytesIO()
     plt.savefig(buffer, format='png')

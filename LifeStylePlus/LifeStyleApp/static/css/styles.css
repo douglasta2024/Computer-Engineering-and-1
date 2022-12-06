@@ -9,6 +9,7 @@
     color: #fff;
     font-size: 150px;
 }
+/* Area and circles are from the pre coded template to get animations */
 .area{
     background: #3498db;
     width: 100%;
@@ -127,7 +128,7 @@
     }
 
 }
-
+/* After this line there are custom code for the whole website whenever it uses one of the tags below */
 body{
   font-family: 'Exo', sans-serif;
   font-weight: bold;
