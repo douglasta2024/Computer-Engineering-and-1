@@ -55,7 +55,7 @@ def physicalPage(request):
         if form.is_valid():
             form.save()
         return redirect('graph-page')
-    return render(request, 'LifeStyleApp/physicalDataInput.html', {'form' : UploadForm})
+    return render(request, 'LifeStyleApp/physicalDataInput.html', {'form' : UploadForm}) #
 
 def graphPage(request):
     # Does the average calculation and does the graph calculation by the objects in the model from the admin django page
