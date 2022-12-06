@@ -14,7 +14,7 @@
         Graph
     </h1>
     <h2>
-        Your Average! : {{ avg }}
+        Your Average! : {{ avg }} <!--Displays averages from data-->
     </h2>
     <h3>
         Average for Males: 2.39 Miles
@@ -35,7 +35,7 @@
             <li></li>
         </ul>
         {% if chart %}
-            <img src="data:image/png;base64, {{ chart|safe }}">
+            <img src="data:image/png;base64, {{ chart|safe }}"> <!--Displays graph image-->
         {% endif %}
     </div>
 

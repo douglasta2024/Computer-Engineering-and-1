@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import base64
 from io import BytesIO
 
-def get_graph():
+def get_graph(): #Builds the graph
     buffer = BytesIO()
     plt.savefig(buffer, format='png')
     buffer.seek(0)
@@ -12,7 +12,7 @@ def get_graph():
     buffer.close()
     return graph
 
-def get_plot(x,y):
+def get_plot(x,y): #Function to display graph
     plt.switch_backend('AGG')
     plt.figure(figsize=(10,5))
     plt.title('Overall Progress')
