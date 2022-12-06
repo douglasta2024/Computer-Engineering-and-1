@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-
+/* For styles applied over several pages. Page-specific styles and imported styles can be found in the HTML files*/
 *{
     margin: 0px;
     padding: 0px;
