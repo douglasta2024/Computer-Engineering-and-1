@@ -8,7 +8,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
     <style>
-        /*Mental Health Resource Blocks*/
+        /*Mental Health Resource Block Attributes*/
         .resourcebox {
             display: inline-block;
             border-top: 3px solid black;
@@ -27,6 +27,7 @@
     <br>
     <br>
     <div class="modal/body text-center">
+        <!-- Title and survey links -->
         <p>Mental Health is an essential part of living a balanced, healthy life. To begin, please take some of the
             surveys
             below and use those results to find the resources you need.
@@ -41,6 +42,7 @@
             Index</a>
         <br>
         <br>
+        <!-- Return to home page button -->
         <div class="button-wrapper">
             <button type="button" id="button1">
                 <a href="{% url 'home-page' %}">Go Back to Home Page</a>
@@ -78,6 +80,8 @@
             <option value="#Adultout">Adult Outpatient Psychiatry Services</option>
             <option value="#UFrecov">UF Health Florida Recovery Center</option>
         </select>
+        <!-- Resource blocks each contain one source with an ID that can be moved to with the dropdown menu
+             Each contains name, uses, and contact info-->
         <div class="resourcebox" id="StudentDev">
             <h3>Office of Counseling and Student Development</h3>
             <p>Harrell Medical Education Building 1104 Newell Drive, Gainesville, FL 32610 Fourth Floor, Suite 446 </p>
