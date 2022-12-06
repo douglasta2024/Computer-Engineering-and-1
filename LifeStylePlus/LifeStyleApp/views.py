@@ -40,13 +40,13 @@ def loginPage(request):
 def surveyPage(request):
     return render(request, 'LifeStyleApp/survey.html')
 
-def physicalPage(request):
+def physicalPage(request): #Completed by Douglas and James
     if request.method == 'POST':
         form = UploadForm(request.POST)
         if form.is_valid():
             form.save()
         return redirect('graph-page')
-    return render(request, 'LifeStyleApp/physicalDataInput.html', {'form' : UploadForm})
+    return render(request, 'LifeStyleApp/physicalDataInput.html', {'form' : UploadForm}) #
 
 def graphPage(request):
     post_data_list = Post.objects.all()
