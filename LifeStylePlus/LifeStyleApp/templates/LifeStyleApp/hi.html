@@ -1,3 +1,4 @@
+<!--HOMEPAGE-->
 <!DOCTYPE html>
 
 <html lang="en">
@@ -8,6 +9,10 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" />
+        
+        
+        <!--stylize (height and width) buttons and containers. set hight, width, and position of images-->
+        
         <style>
             #button1{
                 border: none;
@@ -55,23 +60,30 @@
 
     </head>
     <body>
+        <!--Main heading-->
         <h1>
             Welcome to Lifestyle+!
         </h1>
-
+        <!--second heading-->
         <h2>
             Please choose the topic that you need assistance with.
         </h2>
 
+        <!--options to go to different pages-->
         <h3 class="mental-health">
+            <!--option 1: select to go to physical health page -->
             <span class="physical-health"><a href="{% url 'physical-page' %}">Physical Health Section </a></span>
+            <!--option 2: select to go to mental health page -->
             <span class="MH"> <a href="{% url 'survey' %}">Mental Health Section  </a></span>
         </h3>
         <div class="container">
 
+            <!--images. click image to go to respective page -->
           <div class="button-wrapper">
               <button type="button physical-button" id="button1">
+                  <!--link to physical health page -->
                   <a href="{% url 'physical-page' %}">
+                      <!--image linked to physical health page -->
                       <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2022/04/exerciseHowOften-944015592-770x533-1-650x428.jpg" alt="exerciseHowOften-944015592-770x533-1-650x428jpg" border="0" />
                   </a>
               </button>
@@ -80,7 +92,9 @@
         <div class="button-wrapper2">
 
               <button type="button mentalhealth-button" id="button2">
+                  <!--link to mental health page -->
                   <a href="{% url 'survey' %}">
+                      <!--image linked to mental health page -->
                       <img src="https://media.istockphoto.com/id/1279275812/vector/happy-girl-having-great-mental-health.jpg?s=612x612&w=0&k=20&c=XUXTN8EQ17wUh0LqJ2APr5-5X38egQDQ62395l0ktIc=" alt="happy-girl-having-great-mental-healthjpg" border="0" />
                   </a>
               </button>

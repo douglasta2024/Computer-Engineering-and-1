@@ -10,14 +10,14 @@
     <title>Graph Page</title>
 </head>
 <body>
-    <h1> <!--Written by Douglas and James -->
+    <h1>
         Graph
     </h1>
     <h2>
         Your Average! : {{ avg }}
     </h2>
     <h3>
-        Average for Males: 2.39 Miles <!--Average miles ran by gender calculated in separate research -->
+        Average for Males: 2.39 Miles
         <br>
         Average for Females: 2.05 Miles
     </h3>
@@ -35,7 +35,7 @@
             <li></li>
         </ul>
         {% if chart %}
-            <img src="data:image/png;base64, {{ chart|safe }}"> <!--Displays the graph image -->
+            <img src="data:image/png;base64, {{ chart|safe }}">
         {% endif %}
     </div>
 
